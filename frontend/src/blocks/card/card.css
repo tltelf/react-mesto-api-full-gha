@@ -1,0 +1,9 @@
+.card {
+  position: relative;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+  grid-template-areas: "card__img card__img"
+  "card__title card__like";
+}

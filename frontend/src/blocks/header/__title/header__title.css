@@ -1,0 +1,12 @@
+.header__title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding-top: 7px;
+}
+
+.header__title:hover {
+  opacity: 0.6;
+}

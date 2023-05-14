@@ -1,0 +1,10 @@
+.popup__container-form-field_auth {
+  border-bottom: 2px solid #CCCCCC;
+  background: black;
+  color: #CCCCCC;
+  padding-bottom: 7px;
+}
+
+.popup__container-form-field_auth::placeholder {
+  color: #CCCCCC;
+}

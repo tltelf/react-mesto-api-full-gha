@@ -1,0 +1,9 @@
+.elements {
+  margin-bottom: 66px;
+}
+
+@media (max-width: 480px) {
+  .elements {
+    margin-bottom: 50px;
+  }
+}

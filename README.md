@@ -1,15 +1,26 @@
 [![Tests](https://github.com/yandex-praktikum/react-mesto-api-full-gha/actions/workflows/tests.yml/badge.svg)](https://github.com/yandex-praktikum/react-mesto-api-full-gha/actions/workflows/tests.yml)
-# react-mesto-api-full
-Репозиторий для приложения проекта `Mesto`, включающий фронтенд и бэкенд части приложения со следующими возможностями: авторизации и регистрации пользователей, операции с карточками и пользователями. Бэкенд расположите в директории `backend/`, а фронтенд - в `frontend/`. 
-  
-Пожалуйста, прикрепите в это описание ссылку на сайт, размещенный на Яндекс.Облаке.
+# Веб-приложение Mesto.
 
-Адрес репозитория: https://github.com/...
+## Пользователи этого приложения могут:
 
-## Ссылки на проект
+* Загружать фотографии с подписями.
+* Удалять их, если передумали.
+* Ставить лайки фотографиям друг друга.
+* Редактировать профиль (изменять информацию о себе и аватар).
 
-IP-адрес x.x.x.x
+### На изображении ниже представлено, как выглядит часть веб-приложения Mesto
 
-Frontend https://...
+![Обычная ссылка](https://pictures.s3.yandex.net/resources/Screen_Shot_2020-06-18_at_4.18.50_PM_1592653422.png)
 
-Backend https://...
+Адрес репозитория: https://github.com/tltelf/react-mesto-api-full-gha
+
+* IP  158.160.12.181
+* Frontend  https://tltelf.nomoredomains.monster
+* Backend  https://api.tltelf.nomoredomains.monster
+
+## Используемые технологии:
+1. HTML & CSS
+2. JavaScript
+3. Методология БЭМ
+4. React
+5. Библиотека пакетов NPM

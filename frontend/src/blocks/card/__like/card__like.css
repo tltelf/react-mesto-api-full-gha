@@ -1,0 +1,15 @@
+.card__like {
+  width: 22px;
+  height: 19px;
+  grid-area: card__like;
+  margin-top: 22px;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  background-image: url('../../../images/card__like_disabled.svg');
+}
+
+.card__like:hover {
+  opacity: .5;
+}

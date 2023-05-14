@@ -1,0 +1,28 @@
+.profile {
+  display: grid;
+  grid-template-areas: "profile__avatar profile__info profile__addButton";
+  grid-template-columns: min-content minmax(min-content, 340px) 1fr;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 900px) {
+  .profile {
+    row-gap: 36px;
+    grid-template-areas:
+        "profile__avatar profile__info profile__info"
+        "profile__addButton profile__addButton profile__addButton";
+  }
+}
+
+@media (max-width: 768px) {
+  .profile {
+    gap: 0;
+    margin-bottom: 36px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    grid-template-areas:
+        "profile__avatar"
+        "profile__info"
+        "profile__addButton";
+  }
+}

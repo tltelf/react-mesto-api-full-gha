@@ -1,0 +1,16 @@
+.card__title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  grid-area: card__title;
+  margin: 25px 23px 27px 21px;
+}
+
+@media (max-width: 480px) {
+  .card__title {
+    margin-bottom: 25px;
+  }
+}
