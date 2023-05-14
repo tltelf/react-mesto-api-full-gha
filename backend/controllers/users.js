@@ -10,6 +10,10 @@ const getUserInfo = (req, res, next) => {
   findUser(req.user._id, res, next);
 };
 
+const getUser = (req, res, next) => {
+  findUser(req.params.id, res, next);
+};
+
 const login = (req, res, next) => {
   const { email, password } = req.body;
   return User.findUserByCredentials(email, password)
@@ -21,6 +25,12 @@ const login = (req, res, next) => {
       );
       res.send({ token });
     })
+    .catch(next);
+};
+
+const getUsers = (req, res, next) => {
+  User.find({})
+    .then((users) => res.send(users))
     .catch(next);
 };
 
@@ -70,6 +80,8 @@ const updateAvatar = (req, res, next) => {
 module.exports = {
   login,
   getUserInfo,
+  getUsers,
+  getUser,
   createUser,
   updateProfile,
   updateAvatar,

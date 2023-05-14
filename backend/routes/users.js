@@ -1,13 +1,22 @@
 const usersRouter = require('express').Router();
 const { celebrate } = require('celebrate');
-const { updateProfileJoi, updateAvatarJoi } = require('../utils/reqValidate');
+const { idJoi, updateProfileJoi, updateAvatarJoi } = require('../utils/reqValidate');
 const {
   getUserInfo,
+  getUsers,
+  getUser,
   updateProfile,
   updateAvatar,
 } = require('../controllers/users');
 
 usersRouter.get('/me', getUserInfo);
+usersRouter.get('/', getUsers);
+
+usersRouter.get(
+  '/:id',
+  celebrate(idJoi),
+  getUser,
+);
 
 usersRouter.patch(
   '/me',
