@@ -1,65 +1,87 @@
 import { checkResponse } from "./checkResponse";
-const token = localStorage.getItem("token");
 
 class Api {
   constructor(options) {
     this._baseUrl = options.baseUrl;
-    this._headers = options.headers;
   }
 
-  getUserInfo() {
+  getUserInfo(token) {
     return this._request(`/users/me`, {
-      headers: this._headers,
+      headers: { 
+        authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
     });
   }
 
-  getInitialCards() {
+  getInitialCards(token) {
     return this._request(`/cards`, {
-      headers: this._headers,
+      headers: { 
+        authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
     });
   }
 
-  setUserInfo(data) {
+  setUserInfo(data, token) {
     return this._request(`/users/me`, {
       method: "PATCH",
-      headers: this._headers,
+      headers: { 
+        authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(data),
     });
   }
 
-  renderCard(data) {
+  renderCard(data, token) {
     return this._request(`/cards`, {
       method: "POST",
-      headers: this._headers,
+      headers: { 
+        authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(data),
     });
   }
 
-  deleteCard(id) {
+  deleteCard(id, token) {
     return this._request(`/cards/${id}`, {
       method: "DELETE",
-      headers: this._headers,
+      headers: { 
+        authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
     });
   }
 
-  changeLikeCardStatus(id, isLiked) {
+  changeLikeCardStatus(id, isLiked, token) {
     if (!isLiked) {
       return this._request(`/cards/${id}/likes`, {
         method: "DELETE",
-        headers: this._headers,
+        headers: { 
+        authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
       })
     } else {
       return this._request(`/cards/${id}/likes`, {
         method: "PUT",
-        headers: this._headers,
+        headers: { 
+        authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
       });
     }
   }
 
-  updateAvatar(avatar) {
+  updateAvatar(avatar, token) {
     return this._request(`/users/me/avatar`, {
       method: "PATCH",
-      headers: this._headers,
+      headers: { 
+        authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(avatar),
     });
   }
@@ -71,10 +93,6 @@ class Api {
 
 const api = new Api({
   baseUrl: "https://api.tltelf.nomoredomains.monster",
-  headers: {
-    authorization: `Bearer ${token}`,
-    "Content-Type": "application/json",
-  },
 });
 
 export default api;

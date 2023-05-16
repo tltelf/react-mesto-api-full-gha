@@ -14,9 +14,11 @@
 
 Адрес репозитория: https://github.com/tltelf/react-mesto-api-full-gha
 
-* IP  158.160.12.181
-* Frontend  https://tltelf.nomoredomains.monster
-* Backend  https://api.tltelf.nomoredomains.monster
+Frontend <url>https://tltelf.nomoredomains.monster
+
+Backend <url>https://api.tltelf.nomoredomains.monster
+
+IP <ipv4>https://158.160.12.181
 
 ## Используемые технологии:
 1. HTML & CSS

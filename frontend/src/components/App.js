@@ -43,7 +43,8 @@ function App() {
   });
 
   React.useEffect(() => {
-    Promise.all([api.getUserInfo(), api.getInitialCards()])
+    const token = localStorage.getItem("token");
+    Promise.all([api.getUserInfo(token), api.getInitialCards(token)])
       .then(([info, data]) => {
         setCurrentUser(info);
         setCards(data.reverse());
@@ -52,7 +53,7 @@ function App() {
         console.error(err);
       });
     handleTokenCheck();
-  }, []);
+  }, [loggedIn]);
 
   function handleEditAvatarClick() {
     setIsEditAvatarPopupOpen(true);
@@ -84,8 +85,9 @@ function App() {
 
   function handleCardLike(card, currentUser) {
     const isLiked = card.likes.some((i) => i._id === currentUser._id);
+    const token = localStorage.getItem("token");
     api
-      .changeLikeCardStatus(card._id, !isLiked)
+      .changeLikeCardStatus(card._id, !isLiked, token)
       .then((newCard) => {
         setCards((state) =>
           state.map((c) => (c._id === card._id ? newCard : c))
@@ -97,8 +99,9 @@ function App() {
   }
 
   function handleCardDelete(card) {
+    const token = localStorage.getItem("token");
     api
-      .deleteCard(card._id)
+      .deleteCard(card._id, token)
       .then(() => {
         setCards((state) => state.filter((c) => c._id !== card._id));
       })
@@ -108,9 +111,10 @@ function App() {
   }
 
   function handleUpdateUser({ name, about }) {
+    const token = localStorage.getItem("token");
     setIsLoading(true);
     api
-      .setUserInfo({ name, about })
+      .setUserInfo({ name, about }, token)
       .then((info) => {
         setCurrentUser(info);
         closeAllPopups();
@@ -124,9 +128,10 @@ function App() {
   }
 
   function handleUpdateAvatar({ avatar }) {
+    const token = localStorage.getItem("token");
     setIsLoading(true);
     api
-      .updateAvatar({ avatar })
+      .updateAvatar({ avatar }, token)
       .then((info) => {
         setCurrentUser(info);
         closeAllPopups();
@@ -140,9 +145,10 @@ function App() {
   }
 
   function handleAddPlaceSubmit({ name, link }) {
+    const token = localStorage.getItem("token");
     setIsLoading(true);
     api
-      .renderCard({ name, link })
+      .renderCard({ name, link }, token)
       .then((newCard) => {
         setCards([newCard, ...cards]);
         closeAllPopups();
