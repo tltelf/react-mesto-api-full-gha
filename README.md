@@ -1,4 +1,4 @@
-[![Tests](https://github.com/yandex-praktikum/react-mesto-api-full-gha/actions/workflows/tests.yml/badge.svg)](https://github.com/yandex-praktikum/react-mesto-api-full-gha/actions/workflows/tests.yml)
+[![Tests 15 sprint](https://github.com/tltelf/react-mesto-api-full-gha/actions/workflows/tests.yml/badge.svg)](https://github.com/tltelf/react-mesto-api-full-gha/actions/workflows/tests.yml)
 # Веб-приложение Mesto.
 
 ## Пользователи этого приложения могут:
