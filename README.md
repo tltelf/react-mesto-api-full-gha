@@ -1,30 +1,52 @@
-[![Tests](https://github.com/yandex-praktikum/react-mesto-api-full-gha/actions/workflows/tests.yml/badge.svg)](https://github.com/yandex-praktikum/react-mesto-api-full-gha/actions/workflows/tests.yml)
-# Веб-приложение Mesto.
+[![Tests 15 sprint](https://github.com/tltelf/react-mesto-api-full-gha/actions/workflows/tests.yml/badge.svg)](https://github.com/tltelf/react-mesto-api-full-gha/actions/workflows/tests.yml)
 
-## Пользователи этого приложения могут:
+# Проектная работа «Веб-приложение Mesto».
 
-* Загружать фотографии с подписями.
-* Удалять их, если передумали.
-* Ставить лайки фотографиям друг друга.
-* Редактировать профиль (изменять информацию о себе и аватар).
+В данной проектной работе был объединен [бэкенд](https://github.com/tltelf/express-mesto-gha) и [фронтенд](https://github.com/tltelf/react-mesto-auth) приложения «Mesto». Код выложен и запущен на удаленном сервере.
 
-### На изображении ниже представлено, как выглядит часть веб-приложения Mesto
+### Пользователи этого приложения могут:
+
+- Загружать фотографии с подписями.
+- Удалять их, если передумали.
+- Ставить лайки фотографиям друг друга.
+- Редактировать профиль (изменять информацию о себе и аватар).
+
+### Цель проектной работы:
+
+- На практике понять и объединить между собой бэкенд и фронтенд
+- Научиться работать с удаленным сервером
+- Выложить проект на удаленный сервер
+
+#### Запуск проекта фронтенд:
+
+1. Скачать код или клонировать репозиторий на локальный компьютер
+2. Открыть папку `frontend` в редакторе кода
+3. Установить npm командой `npm install`
+4. Запустить команду `npm start`
+
+#### Запуск проекта бэкенд:
+
+1. Скачать код или клонировать репозиторий на локальный компьютер
+2. Открыть папку `backend` в редакторе кода
+3. Установить npm командой 'npm install'
+4. Далее выполнить одну из следующих команд
+
+`npm run start` — запускает сервер  
+`npm run dev` — запускает сервер с hot-reload
+
+#### На изображении ниже представлено, как выглядит часть веб-приложения Mesto
 
 ![Обычная ссылка](https://pictures.s3.yandex.net/resources/Screen_Shot_2020-06-18_at_4.18.50_PM_1592653422.png)
 
-Адрес репозитория: https://github.com/tltelf/react-mesto-api-full-gha
+#### [Ссылка на приложение](https://tltelf.nomoredomains.monster/)
 
-Frontend <url>https://tltelf.nomoredomains.monster
+### Используемые технологии:
 
-Backend <url>https://api.tltelf.nomoredomains.monster
-
-IP <ipv4>https://158.160.12.181
-
-## Используемые технологии:
 1. HTML & CSS
-2. JavaScript
-3. Методология БЭМ
-4. React
-5. Библиотека пакетов NPM
-6. Node.js
-7. Express.js
+2. Методология БЭМ
+3. React
+4. Node.js
+5. Express.js
+6. MongoDB
+7. Mongoose
+8. Библиотека пакетов NPM
